@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "postinstall": "(cd m1 && npm install) && (cd ../m2 && npm install)",
+        "start": "concurrently \"cd m1 && node app.js\" \"cd m2 && node worker.js\""
+        
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.0"
+    }
+}
